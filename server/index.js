@@ -1,19 +1,17 @@
-
-
-//mongodb+srv://root:<db_password>@cluster0.s8askso.mongodb.net/notesdb?retryWrites=true&w=majority&appName=Cluster0
-
 // index.js
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const dotenv = require("dotenv");
 const Note = require("./model/note");
 
+dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 // MongoDB Atlas connection
-mongoose.connect("mongodb+srv://root:root@cluster0.s8askso.mongodb.net/notesdb?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error("MongoDB error:", err));
 
@@ -76,6 +74,9 @@ app.delete("/notes/:id", async (req, res) => {
 });
 
 // Start server
-app.listen(3001, () => {
-  console.log("Server is running on port 3001");
+
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
