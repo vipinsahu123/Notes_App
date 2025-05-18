@@ -77,13 +77,13 @@ The frontend will run on `http://localhost:5173` (Vite default).
 ## 📸 Screenshots
 
 ### 🖼️ Notes List View
-![Notes List](./screenshots/screenshot1.png)
+![Notes List](./screenshots/Screenshot1.png)
 
 ### 📝 Add Note Page
-![Add Note](./screenshots/screenshot2.png)
+![Add Note](./screenshots/Screenshot2.png)
 
 ### 📝 Edit Note Page
-![Edit Note](./screenshots/screenshot3.png)
+![Edit Note](./screenshots/Screenshot3.png)
 
 ---
 
