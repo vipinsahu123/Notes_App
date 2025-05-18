@@ -11,7 +11,7 @@ const EditNote = () => {
 
   // Fetch existing note
   useEffect(() => {
-    axios.get(`https://notes-app-server-ag2f.onrender.com/notes/${id}`)
+    axios.get(`https://notes-app-server-88qm.onrender.com/notes/${id}`)
       .then((res) => {
         setTitle(res.data.title);
         setContent(res.data.content);
@@ -23,7 +23,7 @@ const EditNote = () => {
   const handleUpdate = (e) => {
     e.preventDefault();
 
-    axios.put(`https://notes-app-server-ag2f.onrender.com/notes/${id}`, { title, content })
+    axios.put(`https://notes-app-server-88qm.onrender.com/notes/${id}`, { title, content })
       .then(() => navigate("/"))
       .catch((err) => console.error("Error updating note:", err));
   };

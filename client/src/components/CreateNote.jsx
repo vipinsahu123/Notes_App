@@ -11,7 +11,7 @@ const CreateNote = () => {
     e.preventDefault();
 
     // Send data to backend
-    axios.post("https://notes-app-server-ag2f.onrender.com/notes", { title, content })
+    axios.post("https://notes-app-server-88qm.onrender.com/notes", { title, content })
       .then(() => {
         setTitle("");
         setContent("");
