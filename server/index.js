@@ -75,7 +75,7 @@ app.delete("/notes/:id", async (req, res) => {
 
 // Start server
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
