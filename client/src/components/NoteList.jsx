@@ -6,13 +6,13 @@ const NotesList = () => {
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    axios.get("https://notes-app-server-ag2f.onrender.com/notes")
+    axios.get("http://notes-app-server-ag2f.onrender.com/notes")
       .then((res) => setNotes(res.data))
       .catch((err) => console.error("Error fetching notes:", err));
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`https://notes-app-server-ag2f.onrender.com/notes/${id}`)
+    axios.delete(`http://notes-app-server-ag2f.onrender.com/notes/${id}`)
       .then(() => setNotes(notes.filter(note => note._id !== id)))
       .catch((err) => console.error("Error deleting note:", err));
   };
